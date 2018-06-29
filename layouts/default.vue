@@ -1,9 +1,9 @@
 <template>
     <div>
         <h1 class="site-title">
-            <a class="site-title__link" href="/">
+            <nuxt-link :to="{ path: '/' }" class="site-title__link">
                 Nuxt Demo
-            </a>
+            </nuxt-link>
         </h1>
         <nuxt/>
     </div>
