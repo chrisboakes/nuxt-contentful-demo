@@ -55,7 +55,7 @@ module.exports = {
         routes: () => {
             const client = contentful.createClient({
                 space:  process.env.CTF_SPACE_ID,
-                accessToken: process.env.CTF_CDA_ACCESS_TOKEN
+                accessToken: process.env.CTF_CD_ACCESS_TOKEN
             });
 
             return client.getEntries({
