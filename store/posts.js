@@ -12,12 +12,11 @@ export const mutations = {
 
 export const actions = {
     async getPosts({commit}) {
-        await client.getEntries({
+        const response = client.getEntries({
             content_type: 'blogPost'
-        }).then((response) => {
-            if (response.items.length > 0) {
-                commit('setPosts', response.items)
-            }
-        }).catch(console.error)
+        });
+        if (response.items.length > 0) {
+            commit('setPosts', response.items);
+        }
     }
 }
