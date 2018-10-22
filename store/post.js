@@ -17,7 +17,7 @@ export const mutations = {
 export const actions = {
     async getPostBySlug({commit}, slug) {
         commit('setLoading', true);
-        const response = client.getEntries({
+        const response = await client.getEntries({
             content_type: 'blogPost',
             'fields.slug': slug
         });
